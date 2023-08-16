@@ -193,7 +193,7 @@
   },
   {
     "sleeper-player-id": "2009",
-    "player-name": "Kevin Porter Jr.",
+    "player-name": "Kevin Porter Jr",
     "Team": "HOU",
     "Age": 23,
     "Pos 1": "SG",
@@ -5245,7 +5245,7 @@
     "15+APG": null,
     "20+RPG": null,
     "bdl-player-id": null,
-    "nba-api-pID": null
+    "nba-api-pID": 1641716
   },
   {
     "sleeper-player-id": "2040",

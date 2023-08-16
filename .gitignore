@@ -1,4 +1,4 @@
-go.mod
+*.File
 
 .vscode/
 
@@ -9,3 +9,5 @@ go_to_py.txt
 player_headshots/
 
 __debug_bin3924316641
+
+user image/
