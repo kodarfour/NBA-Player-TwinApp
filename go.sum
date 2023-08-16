@@ -1,0 +1,8 @@
+github.com/caffix/cloudflare-roundtripper v0.0.0-20181218223503-4c29d231c9cb h1:RKySaWkjoE/ECY1FFk4JbcfG9dTrJmoqp08rQ2oA51Y=
+github.com/caffix/cloudflare-roundtripper v0.0.0-20181218223503-4c29d231c9cb/go.mod h1:LkIRP8n1KY5Ew4Y7S+V7ooavIXNrraFZ1IKmI4SNMuE=
+github.com/robertkrimen/otto v0.2.1 h1:FVP0PJ0AHIjC+N4pKCG9yCDz6LHNPCwi/GKID5pGGF0=
+github.com/robertkrimen/otto v0.2.1/go.mod h1:UPwtJ1Xu7JrLcZjNWN8orJaM5n5YEtqL//farB5FlRY=
+golang.org/x/text v0.4.0 h1:BrVqGRd7+k1DiOgtnFvAkoQEWQvBc25ouMJM6429SFg=
+golang.org/x/text v0.4.0/go.mod h1:mrYo+phRRbMaCq/xk9113O4dZlRixOauAjOtrjsXDZ8=
+gopkg.in/sourcemap.v1 v1.0.5 h1:inv58fC9f9J3TK2Y2R1NPntXEn3/wjWHkonhIUODNTI=
+gopkg.in/sourcemap.v1 v1.0.5/go.mod h1:2RlvNNSMglmRrcvhfuzp4hQHwOtjxlbjX7UPY/GXb78=

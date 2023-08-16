@@ -3,3 +3,5 @@ go.mod
 .vscode/
 
 facerec_info.pdf
+
+go_to_py.txt
