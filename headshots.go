@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	jsonFilePath := "player_headshots/player_data/playerdata.json"
+	jsonFilePath := "player_data/playerdata.json"
 
 	jsonFile, err := os.Open(jsonFilePath)
 	if err != nil {
@@ -32,22 +32,36 @@ func main() {
 
 	json.Unmarshal(byteValueArray_for_jsonFile, &players)
 
+	var players_slice []string
+
 	for _, player := range players {
 		if player["nba-api-pID"] == nil {
 			continue
 		} else {
 			player_name_str := fmt.Sprintf("%v", player["player-name"])
+			player_name_folder_path := "player_headshots/" + player_name_str
+			if check_path(player_name_folder_path) {
+				continue
+			} else {
+				err := os.MkdirAll(player_name_folder_path, 0777)
+				if err != nil {
+					fmt.Println(err)
+					return
+				}
+			}
 			raw_player_ID := player["nba-api-pID"]
 			player_id_float, ok := raw_player_ID.(float64)
 			if ok {
 				var player_ID_int int = int(player_id_float)
 				player_id_str := strconv.Itoa(player_ID_int)
-				player_headshot_path := "player_headshots/" + player_name_str + ".jpeg"
+				player_headshot_path := player_name_folder_path + "/" + player_name_str + ".jpeg"
 
 				if check_path(player_headshot_path) {
 					fmt.Printf("JPEG for %s already exists\n", player_name_str)
+					players_slice = append(players_slice, player_name_str)
 					continue
 				} else {
+					players_slice = append(players_slice, player_name_str)
 					URL := "https://cdn.nba.com/headshots/nba/latest/1040x760/" + player_id_str + ".png"
 					err := downloadFile_at_headshots(URL, player_headshot_path)
 					if err != nil {
@@ -60,6 +74,8 @@ func main() {
 			}
 		}
 	}
+
+	fmt.Println(players_slice)
 }
 
 func downloadFile_at_headshots(URL, fileName string) error {
