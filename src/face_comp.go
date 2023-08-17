@@ -29,7 +29,7 @@ func main() {
 
 	rec.Tolerance = 0.4
 	rec.UseGray = true
-	rec.UseCNN = false
+	rec.UseCNN = true
 
 	defer rec.Close()
 
@@ -52,7 +52,7 @@ func main() {
 
 	json.Unmarshal(byteValueArray_for_jsonFile, &players)
 
-	var players_slice []string
+	var players_map = make(map[string]float64)
 
 	path_to_player_dataset := filepath.Join(player_data_dir, "playerdataset.json")
 
@@ -63,11 +63,11 @@ func main() {
 				continue
 			} else {
 				player_name_str := fmt.Sprintf("%v", player["player-name"])
-				players_slice = append(players_slice, player_name_str)
+				players_map[player_name_str] = float64(0)
 			}
 		}
 		rec.LoadDataset(path_to_player_dataset)
-		fmt.Println("Populated players slice and loaded playerdataset.json")
+		fmt.Println("Populated players map and loaded playerdataset.json")
 
 	default:
 		for _, player := range players {
@@ -75,52 +75,34 @@ func main() {
 				continue
 			} else {
 				player_name_str := fmt.Sprintf("%v", player["player-name"])
-				players_slice = append(players_slice, player_name_str)
+				players_map[player_name_str] = float64(0)
 				player_name_jpeg := player_name_str + ".jpeg"
-				addFile(&rec, filepath.Join(player_headshots_dir, player_name_jpeg), player_name_str)
+				add_file_to_dataset(&rec, filepath.Join(player_headshots_dir, player_name_jpeg), player_name_str)
 			}
 		}
 		rec.SaveDataset(path_to_player_dataset)
-		fmt.Println("Populated players slice and saved playerdataset.json")
+		fmt.Println("Populated players map and saved playerdataset.json")
 	}
 
 	rec.SetSamples()
 
-	username := "J. Cole"
-	addFile(&rec, user_jpg_path, username)
-
-	rec.SetSamples()
-
-	playerName := "Tobias Harris"
-	playerJPEG := playerName + ".jpeg"
-
-	// INPUTTED User
+	username := "Kofi Darfour"
 	user_Descriptor, err := get_Descriptor(&rec, user_jpg_path)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// SAME Player
-	// user_Descriptor, err := get_Descriptor(&rec, filepath.Join(player_headshots_dir, playerJPEG))
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// DIFFERENT Player
-	// playerName2 := "Lebron James"
-	// playerJPEG2 := playerName2 + ".jpeg"
-	// user_Descriptor, err := get_Descriptor(&rec, filepath.Join(player_headshots_dir, playerJPEG2))
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
+	playerName := "Bruno Fernando"
+	playerJPEG := playerName + ".jpeg"
 
 	player_descriptor, err := get_Descriptor(&rec, filepath.Join(player_headshots_dir, playerJPEG))
 	if err != nil {
 		log.Fatal(err)
 	}
-	euclideanD := face.SquaredEuclideanDistance(user_Descriptor, player_descriptor)
-	rounded_euclideanD := fmt.Sprintf("%.2f", euclideanD)
 
+	euclideanD := face.SquaredEuclideanDistance(user_Descriptor, player_descriptor)
+
+	rounded_euclideanD := fmt.Sprintf("%.5f", euclideanD)
 	similarity_score := get_distance_based_similarity(euclideanD)
 	similarity_score_percentage := fmt.Sprintf("%.2f", (math.Round(similarity_score*10000) / 100))
 
@@ -152,7 +134,7 @@ func get_distance_based_similarity(euclidean_distance float64) float64 {
 	return result
 }
 
-func addFile(rec *recognizer.Recognizer, Path, image_Id string) {
+func add_file_to_dataset(rec *recognizer.Recognizer, Path, image_Id string) {
 
 	err := rec.AddImageToDataset(Path, image_Id)
 
