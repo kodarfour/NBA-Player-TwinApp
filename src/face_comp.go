@@ -6,8 +6,11 @@ import (
 	"io"
 	"log"
 	"math"
+	"math/rand"
 	"os"
 	"path/filepath"
+	"time"
+
 	"strings"
 
 	"github.com/Kagami/go-face"
@@ -17,12 +20,26 @@ import (
 const player_headshots_dir = "/mnt/c/Users/kodar/Documents/CS-Work/NBA-Player-TwinApp/player_headshots"
 const models_dir = "/mnt/c/Users/kodar/Documents/CS-Work/NBA-Player-TwinApp/models"
 const player_data_dir = "/mnt/c/Users/kodar/Documents/CS-Work/NBA-Player-TwinApp/player_data"
-const user_jpg_path = "/mnt/c/Users/kodar/Documents/CS-Work/NBA-Player-TwinApp/user image/coleee.jpg"
+const user_jpg_path = "/mnt/c/Users/kodar/Documents/CS-Work/NBA-Player-TwinApp/user image"
 const populated_players_map_json_path = "/mnt/c/Users/kodar/Documents/CS-Work/NBA-Player-TwinApp/player_data/playersmap.json"
 
-func convert_to_float64(object interface{}) float64 {
-	euclidean_distance, _ := object.(float64)
-	return euclidean_distance
+func convert_to_float32(object interface{}) ([128]float32, error) {
+	slice, ok := object.([]interface{})
+	if !ok || len(slice) != 128 {
+		return [128]float32{}, fmt.Errorf("ERROR: Data is not a slice of interfaces or has incorrect length")
+	}
+
+	var result [128]float32
+
+	for i, v := range slice {
+		value, ok := v.(float64)
+		if !ok {
+			return [128]float32{}, fmt.Errorf("ERROR: element at index %d is not a float64", i)
+		}
+		result[i] = float32(value)
+	}
+
+	return result, nil
 }
 
 func convert_to_string(object interface{}) string {
@@ -30,13 +47,7 @@ func convert_to_string(object interface{}) string {
 	return name
 }
 
-func convert_to_descriptor(object interface{}) face.Descriptor {
-	descriptor, _ := object.(face.Descriptor)
-	return descriptor
-}
-
 func get_Descriptor(rec *recognizer.Recognizer, jpg_Path string) (face.Descriptor, error) {
-
 	thisFace, err := rec.Classify(jpg_Path)
 	if err != nil {
 		log.Fatal(err)
@@ -48,6 +59,25 @@ func get_Descriptor(rec *recognizer.Recognizer, jpg_Path string) (face.Descripto
 	}
 
 	return this_Descriptor, err
+}
+
+func get_averageDescriptor(descriptors []face.Descriptor) face.Descriptor {
+	if len(descriptors) == 0 {
+		return face.Descriptor{}
+	}
+
+	var averageDescriptor face.Descriptor
+	for _, descriptor := range descriptors {
+		for i, value := range descriptor {
+			averageDescriptor[i] += value
+		}
+	}
+
+	for i := range averageDescriptor {
+		averageDescriptor[i] /= float32(len(descriptors))
+	}
+
+	return averageDescriptor
 }
 
 func get_distance_based_similarity(euclidean_distance float64) float64 {
@@ -121,21 +151,12 @@ func main() {
 
 	json.Unmarshal(byteValueArray_for_jsonFile, &players)
 
-	var players_euclideanD_map = make(map[string]float64)
-	var players_map = make(map[string]interface{})
+	var players_map = make(map[string][]face.Descriptor)
 
 	path_to_player_dataset := filepath.Join(player_data_dir, "playerdataset.json")
 
 	switch {
 	case check_path(path_to_player_dataset):
-		for _, player := range players {
-			if player["nba-api-pID"] == nil {
-				continue
-			} else {
-				player_name_str := fmt.Sprintf("%v", player["player-name"])
-				players_map[player_name_str] = nil
-			}
-		}
 		rec.LoadDataset(path_to_player_dataset)
 		fmt.Println("Created players map and loaded playerdataset.json")
 
@@ -156,7 +177,6 @@ func main() {
 
 					// Check if the file is an image ending in .jpeg
 					if !innerInfo.IsDir() && check_image(innerInfo.Name()) {
-						players_map[getLastDir(currentPlayer_dir)] = nil
 						add_file_to_dataset(&rec, currentPlayer_image, getLastDir(currentPlayer_dir))
 					}
 
@@ -177,14 +197,6 @@ func main() {
 
 	rec.SetSamples()
 
-	username := "J. Cole"
-	user_Descriptor, err := get_Descriptor(&rec, user_jpg_path)
-	if err != nil {
-		log.Fatal(err)
-	} else {
-		fmt.Println("Succesfully Mapped User Image")
-	}
-
 	if check_path(populated_players_map_json_path) {
 		jsonFilePath := populated_players_map_json_path
 		jsonFile, err := os.Open(jsonFilePath)
@@ -194,8 +206,6 @@ func main() {
 		defer jsonFile.Close()
 
 		byteValueArray_for_jsonFile, _ := io.ReadAll(jsonFile)
-
-		var players_map []map[string]interface{}
 
 		json.Unmarshal(byteValueArray_for_jsonFile, &players_map)
 
@@ -218,9 +228,14 @@ func main() {
 
 		for _, dict := range dataset {
 			str := convert_to_string(dict["Id"])
-			descriptor := dict["Descriptor"]
-			fmt.Println(descriptor)
-			players_map[str] = descriptor
+			descriptor, err := convert_to_float32(dict["Descriptor"])
+			if err != nil {
+				fmt.Println("Error converting to [128]float32:", err)
+				return
+			}
+			players_map[str] = append(players_map[str], (face.Descriptor)(descriptor))
+			fmt.Println("\n", str)
+			fmt.Println("\n", players_map[str])
 		}
 
 		file, err := json.MarshalIndent(players_map, "", "\t")
@@ -233,23 +248,18 @@ func main() {
 		fmt.Println("Saved playersmap.json and populated players map")
 	}
 
-	for player, descriptor := range players_map {
-		player_descriptor := convert_to_descriptor(descriptor)
-		euclideanD := face.SquaredEuclideanDistance(user_Descriptor, player_descriptor)
-		players_euclideanD_map[player] = euclideanD
-	}
+	playerName := "Jarace Walker" //random_player(players_map)
 
-	fmt.Println("Players Euclidean Distance Mapped")
+	username := "Kofi"
 
-	playerName := "Tobias Harris"
-	playerJPEG := playerName + ".jpeg"
-
-	player_descriptor, err := get_Descriptor(&rec, filepath.Join(player_headshots_dir, playerJPEG))
+	user_Descriptor, err := get_Descriptor(&rec, filepath.Join(user_jpg_path, "user.jpg"))
 	if err != nil {
 		log.Fatal(err)
+	} else {
+		fmt.Println("Succesfully Mapped User Image")
 	}
 
-	euclideanD := face.SquaredEuclideanDistance(user_Descriptor, player_descriptor)
+	euclideanD := face.SquaredEuclideanDistance(user_Descriptor, get_averageDescriptor(players_map[playerName]))
 
 	rounded_euclideanD := fmt.Sprintf("%.5f", euclideanD)
 	similarity_score := get_distance_based_similarity(euclideanD)
@@ -258,4 +268,16 @@ func main() {
 	fmt.Printf("Euclidean Distance between %s and %s is: %s\n", username, playerName, rounded_euclideanD)
 	fmt.Printf("Similarity Percentage between %s and %s is: %s%%\n", username, playerName, similarity_score_percentage)
 
+}
+
+func random_player(m map[string][]face.Descriptor) string {
+	rand.Seed(time.Now().UnixNano())
+	index := rand.Intn(len(m))
+	for key := range m {
+		if index == 0 {
+			return key
+		}
+		index--
+	}
+	return ""
 }
