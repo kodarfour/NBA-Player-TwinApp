@@ -9,7 +9,6 @@ import (
 	"math/rand"
 	"os"
 	"path/filepath"
-	"time"
 
 	"strings"
 
@@ -34,7 +33,7 @@ func convert_to_float32(object interface{}) ([128]float32, error) {
 	for i, v := range slice {
 		value, ok := v.(float64)
 		if !ok {
-			return [128]float32{}, fmt.Errorf("ERROR: element at index %d is not a float64", i)
+			return [128]float32{}, fmt.Errorf("ERROR: Element at index %d is not a float64", i)
 		}
 		result[i] = float32(value)
 	}
@@ -110,7 +109,7 @@ func check_path(pathname string) bool {
 
 func check_image(filename string) bool {
 	lower := strings.ToLower(filename)
-	return strings.HasSuffix(lower, ".jpeg") // add other extensions if needed
+	return strings.HasSuffix(lower, ".jpeg") // only works wit jpg/jpeg files
 }
 
 func getLastDir(path string) string {
@@ -138,7 +137,7 @@ func main() {
 
 	jsonFile, err := os.Open(jsonFilePath)
 	if err != nil {
-		log.Fatal("ERROR Couldnt open json: ", err)
+		log.Fatal("ERROR: (Couldnt open json) ", err)
 	}
 
 	fmt.Println("Successfully opened the playerdata json file...")
@@ -158,7 +157,7 @@ func main() {
 	switch {
 	case check_path(path_to_player_dataset):
 		rec.LoadDataset(path_to_player_dataset)
-		fmt.Println("Created players map and loaded playerdataset.json")
+		fmt.Println("Loaded playerdataset.json...")
 
 	default:
 		// loop through folders in /player_headshots
@@ -188,12 +187,12 @@ func main() {
 		})
 
 		if err != nil {
-			fmt.Println("Error walking the path:", err)
+			fmt.Println("ERROR: (walking the path)", err)
 		}
 
 	}
 	rec.SaveDataset(path_to_player_dataset)
-	fmt.Println("Created players map and saved playerdataset.json")
+	fmt.Println("Saved playerdataset.json...")
 
 	rec.SetSamples()
 
@@ -201,7 +200,7 @@ func main() {
 		jsonFilePath := populated_players_map_json_path
 		jsonFile, err := os.Open(jsonFilePath)
 		if err != nil {
-			log.Fatal("ERROR Couldnt open json: ", err)
+			log.Fatal("ERROR: (Couldnt open json) ", err)
 		}
 		defer jsonFile.Close()
 
@@ -209,13 +208,13 @@ func main() {
 
 		json.Unmarshal(byteValueArray_for_jsonFile, &players_map)
 
-		fmt.Println("Loaded playersmap.json and populated players map")
+		fmt.Println("Loaded playersmap.json...")
 	} else {
 		jsonFilePath := "/mnt/c/Users/kodar/Documents/CS-Work/NBA-Player-TwinApp/player_data/playerdataset.json"
 
 		jsonFile, err := os.Open(jsonFilePath)
 		if err != nil {
-			log.Fatal("ERROR Couldnt open json: ", err)
+			log.Fatal("ERROR: (Couldnt open json) ", err)
 		}
 
 		defer jsonFile.Close()
@@ -230,7 +229,7 @@ func main() {
 			str := convert_to_string(dict["Id"])
 			descriptor, err := convert_to_float32(dict["Descriptor"])
 			if err != nil {
-				fmt.Println("Error converting to [128]float32:", err)
+				fmt.Println("ERROR: (converting to [128]float3)", err)
 				return
 			}
 			players_map[str] = append(players_map[str], (face.Descriptor)(descriptor))
@@ -245,10 +244,10 @@ func main() {
 
 		os.WriteFile(populated_players_map_json_path, file, 0644)
 
-		fmt.Println("Saved playersmap.json and populated players map")
+		fmt.Println("Saved playersmap.json...")
 	}
 
-	playerName := "Jarace Walker" //random_player(players_map)
+	playerName := "Joel Embiid" //random_player(players_map)
 
 	username := "Kofi"
 
@@ -256,7 +255,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	} else {
-		fmt.Println("Succesfully Mapped User Image")
+		fmt.Println("Succesfully retrieved user_image's facial descriptors....")
 	}
 
 	euclideanD := face.SquaredEuclideanDistance(user_Descriptor, get_averageDescriptor(players_map[playerName]))
@@ -267,11 +266,9 @@ func main() {
 
 	fmt.Printf("Euclidean Distance between %s and %s is: %s\n", username, playerName, rounded_euclideanD)
 	fmt.Printf("Similarity Percentage between %s and %s is: %s%%\n", username, playerName, similarity_score_percentage)
-
 }
 
 func random_player(m map[string][]face.Descriptor) string {
-	rand.Seed(time.Now().UnixNano())
 	index := rand.Intn(len(m))
 	for key := range m {
 		if index == 0 {

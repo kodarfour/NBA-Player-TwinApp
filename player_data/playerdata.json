@@ -1,25 +1,5 @@
 [
   {
-    "player-name": "Kobe Bufkin",
-    "nba-api-pID": 1641723,
-    "nba-api-tID": 1610612737
-  },
-  {
-    "player-name": "Seth Lundy",
-    "nba-api-pID": 1641754,
-    "nba-api-tID": 1610612737
-  },
-  {
-    "player-name": "Miles Norris",
-    "nba-api-pID": 1641936,
-    "nba-api-tID": 1610612737
-  },
-  {
-    "player-name": "Mouhamed Gueye",
-    "nba-api-pID": 1631243,
-    "nba-api-tID": 1610612737
-  },
-  {
     "player-name": "Bruno Fernando",
     "nba-api-pID": 1628981,
     "nba-api-tID": 1610612737
@@ -30,8 +10,13 @@
     "nba-api-tID": 1610612737
   },
   {
-    "player-name": "Trent Forrest",
-    "nba-api-pID": 1630235,
+    "player-name": "Seth Lundy",
+    "nba-api-pID": 1641754,
+    "nba-api-tID": 1610612737
+  },
+  {
+    "player-name": "Kobe Bufkin",
+    "nba-api-pID": 1641723,
     "nba-api-tID": 1610612737
   },
   {
@@ -75,13 +60,13 @@
     "nba-api-tID": 1610612737
   },
   {
-    "player-name": "Wesley Matthews",
-    "nba-api-pID": 202083,
+    "player-name": "Mouhamed Gueye",
+    "nba-api-pID": 1631243,
     "nba-api-tID": 1610612737
   },
   {
-    "player-name": "Garrison Mathews",
-    "nba-api-pID": 1629726,
+    "player-name": "Wesley Matthews",
+    "nba-api-pID": 202083,
     "nba-api-tID": 1610612737
   },
   {
@@ -92,11 +77,6 @@
   {
     "player-name": "Jayson Tatum",
     "nba-api-pID": 1628369,
-    "nba-api-tID": 1610612738
-  },
-  {
-    "player-name": "Nathan Knight",
-    "nba-api-pID": 1630233,
     "nba-api-tID": 1610612738
   },
   {
@@ -155,29 +135,14 @@
     "nba-api-tID": 1610612738
   },
   {
-    "player-name": "Dalano Banton",
-    "nba-api-pID": 1630625,
-    "nba-api-tID": 1610612738
-  },
-  {
     "player-name": "Svi Mykhailiuk",
     "nba-api-pID": 1629004,
-    "nba-api-tID": 1610612738
-  },
-  {
-    "player-name": "Lamar Stevens",
-    "nba-api-pID": 1630205,
     "nba-api-tID": 1610612738
   },
   {
     "player-name": "Neemias Queta",
     "nba-api-pID": 1629674,
     "nba-api-tID": 1610612738
-  },
-  {
-    "player-name": "Max Strus",
-    "nba-api-pID": 1629622,
-    "nba-api-tID": 1610612739
   },
   {
     "player-name": "Ty Jerome",
@@ -192,16 +157,6 @@
   {
     "player-name": "Evan Mobley",
     "nba-api-pID": 1630596,
-    "nba-api-tID": 1610612739
-  },
-  {
-    "player-name": "Sam Merrill",
-    "nba-api-pID": 1630241,
-    "nba-api-tID": 1610612739
-  },
-  {
-    "player-name": "Craig Porter",
-    "nba-api-pID": 1641854,
     "nba-api-tID": 1610612739
   },
   {
@@ -245,11 +200,6 @@
     "nba-api-tID": 1610612739
   },
   {
-    "player-name": "Dean Wade",
-    "nba-api-pID": 1629731,
-    "nba-api-tID": 1610612739
-  },
-  {
     "player-name": "Isaac Okoro",
     "nba-api-pID": 1630171,
     "nba-api-tID": 1610612739
@@ -287,11 +237,6 @@
   {
     "player-name": "Dyson Daniels",
     "nba-api-pID": 1630700,
-    "nba-api-tID": 1610612740
-  },
-  {
-    "player-name": "Kaiser Gates",
-    "nba-api-pID": 1629232,
     "nba-api-tID": 1610612740
   },
   {
@@ -345,21 +290,6 @@
     "nba-api-tID": 1610612740
   },
   {
-    "player-name": "Julian Phillips",
-    "nba-api-pID": 1641763,
-    "nba-api-tID": 1610612741
-  },
-  {
-    "player-name": "Adama Sanogo",
-    "nba-api-pID": 1641766,
-    "nba-api-tID": 1610612741
-  },
-  {
-    "player-name": "Onuralp Bitim",
-    "nba-api-pID": 1641931,
-    "nba-api-tID": 1610612741
-  },
-  {
     "player-name": "Coby White",
     "nba-api-pID": 1629632,
     "nba-api-tID": 1610612741
@@ -410,18 +340,23 @@
     "nba-api-tID": 1610612741
   },
   {
+    "player-name": "Julian Phillips",
+    "nba-api-pID": 1641763,
+    "nba-api-tID": 1610612741
+  },
+  {
+    "player-name": "Onuralp Bitim",
+    "nba-api-pID": 1641931,
+    "nba-api-tID": 1610612741
+  },
+  {
+    "player-name": "Adama Sanogo",
+    "nba-api-pID": 1641766,
+    "nba-api-tID": 1610612741
+  },
+  {
     "player-name": "Dalen Terry",
     "nba-api-pID": 1631207,
-    "nba-api-tID": 1610612741
-  },
-  {
-    "player-name": "Terry Taylor",
-    "nba-api-pID": 1630678,
-    "nba-api-tID": 1610612741
-  },
-  {
-    "player-name": "Justin Lewis",
-    "nba-api-pID": 1631171,
     "nba-api-tID": 1610612741
   },
   {
@@ -490,16 +425,6 @@
     "nba-api-tID": 1610612742
   },
   {
-    "player-name": "Greg Brown III",
-    "nba-api-pID": 1630535,
-    "nba-api-tID": 1610612742
-  },
-  {
-    "player-name": "Dexter Dennis",
-    "nba-api-pID": 1641926,
-    "nba-api-tID": 1610612742
-  },
-  {
     "player-name": "Maxi Kleber",
     "nba-api-pID": 1628467,
     "nba-api-tID": 1610612742
@@ -520,8 +445,13 @@
     "nba-api-tID": 1610612742
   },
   {
-    "player-name": "Jalen Pickett",
-    "nba-api-pID": 1629618,
+    "player-name": "Christian Braun",
+    "nba-api-pID": 1631128,
+    "nba-api-tID": 1610612743
+  },
+  {
+    "player-name": "Michael Porter Jr.",
+    "nba-api-pID": 1629008,
     "nba-api-tID": 1610612743
   },
   {
@@ -532,16 +462,6 @@
   {
     "player-name": "Hunter Tyson",
     "nba-api-pID": 1641816,
-    "nba-api-tID": 1610612743
-  },
-  {
-    "player-name": "Christian Braun",
-    "nba-api-pID": 1631128,
-    "nba-api-tID": 1610612743
-  },
-  {
-    "player-name": "Michael Porter Jr.",
-    "nba-api-pID": 1629008,
     "nba-api-tID": 1610612743
   },
   {
@@ -587,6 +507,11 @@
   {
     "player-name": "Zeke Nnaji",
     "nba-api-pID": 1630192,
+    "nba-api-tID": 1610612743
+  },
+  {
+    "player-name": "Jalen Pickett",
+    "nba-api-pID": 1629618,
     "nba-api-tID": 1610612743
   },
   {
@@ -690,23 +615,13 @@
     "nba-api-tID": 1610612744
   },
   {
-    "player-name": "Cam Whitmore",
-    "nba-api-pID": 1641715,
-    "nba-api-tID": 1610612745
-  },
-  {
-    "player-name": "Jermaine Samuels Jr.",
-    "nba-api-pID": 1631257,
+    "player-name": "Jabari Smith Jr.",
+    "nba-api-pID": 1631095,
     "nba-api-tID": 1610612745
   },
   {
     "player-name": "Amen Thompson",
     "nba-api-pID": 1641708,
-    "nba-api-tID": 1610612745
-  },
-  {
-    "player-name": "Jabari Smith Jr.",
-    "nba-api-pID": 1631095,
     "nba-api-tID": 1610612745
   },
   {
@@ -725,13 +640,8 @@
     "nba-api-tID": 1610612745
   },
   {
-    "player-name": "Darius Days",
-    "nba-api-pID": 1630620,
-    "nba-api-tID": 1610612745
-  },
-  {
-    "player-name": "Jae'Sean Tate",
-    "nba-api-pID": 1630256,
+    "player-name": "Cam Whitmore",
+    "nba-api-pID": 1641715,
     "nba-api-tID": 1610612745
   },
   {
@@ -740,8 +650,8 @@
     "nba-api-tID": 1610612745
   },
   {
-    "player-name": "Trevor Hudgins",
-    "nba-api-pID": 1631309,
+    "player-name": "Nate Hinton",
+    "nba-api-pID": 1630207,
     "nba-api-tID": 1610612745
   },
   {
@@ -760,11 +670,6 @@
     "nba-api-tID": 1610612745
   },
   {
-    "player-name": "Reggie Bullock Jr.",
-    "nba-api-pID": 203493,
-    "nba-api-tID": 1610612745
-  },
-  {
     "player-name": "Alperen Sengun",
     "nba-api-pID": 1630578,
     "nba-api-tID": 1610612745
@@ -775,29 +680,9 @@
     "nba-api-tID": 1610612745
   },
   {
-    "player-name": "Nate Williams",
-    "nba-api-pID": 1631466,
-    "nba-api-tID": 1610612745
-  },
-  {
-    "player-name": "Jeremiah Robinson-Earl",
-    "nba-api-pID": 1630526,
-    "nba-api-tID": 1610612745
-  },
-  {
     "player-name": "Boban Marjanovic",
     "nba-api-pID": 1626246,
     "nba-api-tID": 1610612745
-  },
-  {
-    "player-name": "Kobe Brown",
-    "nba-api-pID": 1641738,
-    "nba-api-tID": 1610612746
-  },
-  {
-    "player-name": "Jordan Miller",
-    "nba-api-pID": 1641757,
-    "nba-api-tID": 1610612746
   },
   {
     "player-name": "Russell Westbrook",
@@ -840,6 +725,11 @@
     "nba-api-tID": 1610612746
   },
   {
+    "player-name": "Jordan Miller",
+    "nba-api-pID": 1641757,
+    "nba-api-tID": 1610612746
+  },
+  {
     "player-name": "Paul George",
     "nba-api-pID": 202331,
     "nba-api-tID": 1610612746
@@ -847,6 +737,11 @@
   {
     "player-name": "Terance Mann",
     "nba-api-pID": 1629611,
+    "nba-api-tID": 1610612746
+  },
+  {
+    "player-name": "Kobe Brown",
+    "nba-api-pID": 1641738,
     "nba-api-tID": 1610612746
   },
   {
@@ -925,18 +820,8 @@
     "nba-api-tID": 1610612747
   },
   {
-    "player-name": "Colin Castleton",
-    "nba-api-pID": 1630658,
-    "nba-api-tID": 1610612747
-  },
-  {
     "player-name": "Austin Reaves",
     "nba-api-pID": 1630559,
-    "nba-api-tID": 1610612747
-  },
-  {
-    "player-name": "Alex Fudge",
-    "nba-api-pID": 1641788,
     "nba-api-tID": 1610612747
   },
   {
@@ -960,16 +845,6 @@
     "nba-api-tID": 1610612747
   },
   {
-    "player-name": "D'Moi Hodge",
-    "nba-api-pID": 1641793,
-    "nba-api-tID": 1610612747
-  },
-  {
-    "player-name": "Jaime Jaquez Jr.",
-    "nba-api-pID": 1631170,
-    "nba-api-tID": 1610612748
-  },
-  {
     "player-name": "Josh Richardson",
     "nba-api-pID": 1626196,
     "nba-api-tID": 1610612748
@@ -990,13 +865,8 @@
     "nba-api-tID": 1610612748
   },
   {
-    "player-name": "Jamal Cain",
-    "nba-api-pID": 1631288,
-    "nba-api-tID": 1610612748
-  },
-  {
-    "player-name": "Dru Smith",
-    "nba-api-pID": 1630696,
+    "player-name": "Jaime Jaquez Jr.",
+    "nba-api-pID": 1631170,
     "nba-api-tID": 1610612748
   },
   {
@@ -1110,11 +980,6 @@
     "nba-api-tID": 1610612749
   },
   {
-    "player-name": "Lindell Wigginton",
-    "nba-api-pID": 1629623,
-    "nba-api-tID": 1610612749
-  },
-  {
     "player-name": "Giannis Antetokounmpo",
     "nba-api-pID": 203507,
     "nba-api-tID": 1610612749
@@ -1138,11 +1003,6 @@
     "player-name": "Jae Crowder",
     "nba-api-pID": 203109,
     "nba-api-tID": 1610612749
-  },
-  {
-    "player-name": "Leonard Miller",
-    "nba-api-pID": 1631159,
-    "nba-api-tID": 1610612750
   },
   {
     "player-name": "Jaylen Clark",
@@ -1220,6 +1080,11 @@
     "nba-api-tID": 1610612750
   },
   {
+    "player-name": "Leonard Miller",
+    "nba-api-pID": 1631159,
+    "nba-api-tID": 1610612750
+  },
+  {
     "player-name": "Luka Garza",
     "nba-api-pID": 1630568,
     "nba-api-tID": 1610612750
@@ -1265,11 +1130,6 @@
     "nba-api-tID": 1610612751
   },
   {
-    "player-name": "Armoni Brooks",
-    "nba-api-pID": 1629717,
-    "nba-api-tID": 1610612751
-  },
-  {
     "player-name": "Harry Giles III",
     "nba-api-pID": 1628385,
     "nba-api-tID": 1610612751
@@ -1305,16 +1165,6 @@
     "nba-api-tID": 1610612751
   },
   {
-    "player-name": "Nic Claxton",
-    "nba-api-pID": 1629651,
-    "nba-api-tID": 1610612751
-  },
-  {
-    "player-name": "Jacob Toppin",
-    "nba-api-pID": 1631210,
-    "nba-api-tID": 1610612752
-  },
-  {
     "player-name": "Donte DiVincenzo",
     "nba-api-pID": 1628978,
     "nba-api-tID": 1610612752
@@ -1330,6 +1180,11 @@
     "nba-api-tID": 1610612752
   },
   {
+    "player-name": "Duane Washington Jr.",
+    "nba-api-pID": 1630613,
+    "nba-api-tID": 1610612752
+  },
+  {
     "player-name": "Immanuel Quickley",
     "nba-api-pID": 1630193,
     "nba-api-tID": 1610612752
@@ -1337,11 +1192,6 @@
   {
     "player-name": "Quentin Grimes",
     "nba-api-pID": 1629656,
-    "nba-api-tID": 1610612752
-  },
-  {
-    "player-name": "DaQuan Jeffries",
-    "nba-api-pID": 1629610,
     "nba-api-tID": 1610612752
   },
   {
@@ -1357,11 +1207,6 @@
   {
     "player-name": "Evan Fournier",
     "nba-api-pID": 203095,
-    "nba-api-tID": 1610612752
-  },
-  {
-    "player-name": "Charlie Brown Jr.",
-    "nba-api-pID": 1629718,
     "nba-api-tID": 1610612752
   },
   {
@@ -1555,11 +1400,6 @@
     "nba-api-tID": 1610612754
   },
   {
-    "player-name": "Ben Sheppard",
-    "nba-api-pID": 1641767,
-    "nba-api-tID": 1610612754
-  },
-  {
     "player-name": "Daniel Theis",
     "nba-api-pID": 1628464,
     "nba-api-tID": 1610612754
@@ -1582,11 +1422,6 @@
   {
     "player-name": "James Harden",
     "nba-api-pID": 201935,
-    "nba-api-tID": 1610612755
-  },
-  {
-    "player-name": "Montrezl Harrell",
-    "nba-api-pID": 1626149,
     "nba-api-tID": 1610612755
   },
   {
@@ -1655,11 +1490,6 @@
     "nba-api-tID": 1610612755
   },
   {
-    "player-name": "Filip Petrusev",
-    "nba-api-pID": 1630196,
-    "nba-api-tID": 1610612755
-  },
-  {
     "player-name": "Javonte Smart",
     "nba-api-pID": 1630606,
     "nba-api-tID": 1610612755
@@ -1668,11 +1498,6 @@
     "player-name": "Paul Reed",
     "nba-api-pID": 1630194,
     "nba-api-tID": 1610612755
-  },
-  {
-    "player-name": "Jordan Goodwin",
-    "nba-api-pID": 1630692,
-    "nba-api-tID": 1610612756
   },
   {
     "player-name": "Devin Booker",
@@ -1692,11 +1517,6 @@
   {
     "player-name": "Chimezie Metu",
     "nba-api-pID": 1629002,
-    "nba-api-tID": 1610612756
-  },
-  {
-    "player-name": "Keon Johnson",
-    "nba-api-pID": 1630553,
     "nba-api-tID": 1610612756
   },
   {
@@ -1725,8 +1545,8 @@
     "nba-api-tID": 1610612756
   },
   {
-    "player-name": "Udoka Azubuike",
-    "nba-api-pID": 1628962,
+    "player-name": "Jusuf Nurkic",
+    "nba-api-pID": 203994,
     "nba-api-tID": 1610612756
   },
   {
@@ -1745,8 +1565,8 @@
     "nba-api-tID": 1610612756
   },
   {
-    "player-name": "Jusuf Nurkic",
-    "nba-api-pID": 203994,
+    "player-name": "Udoka Azubuike",
+    "nba-api-pID": 1628962,
     "nba-api-tID": 1610612756
   },
   {
@@ -1760,28 +1580,13 @@
     "nba-api-tID": 1610612756
   },
   {
-    "player-name": "Scoot Henderson",
-    "nba-api-pID": 1630703,
-    "nba-api-tID": 1610612757
-  },
-  {
-    "player-name": "Justin Minaya",
-    "nba-api-pID": 1631303,
-    "nba-api-tID": 1610612757
-  },
-  {
-    "player-name": "Kris Murray",
-    "nba-api-pID": 1631200,
-    "nba-api-tID": 1610612757
-  },
-  {
-    "player-name": "Rayan Rupert",
-    "nba-api-pID": 1641712,
-    "nba-api-tID": 1610612757
-  },
-  {
     "player-name": "Moses Brown",
     "nba-api-pID": 1629650,
+    "nba-api-tID": 1610612757
+  },
+  {
+    "player-name": "Scoot Henderson",
+    "nba-api-pID": 1630703,
     "nba-api-tID": 1610612757
   },
   {
@@ -1790,23 +1595,18 @@
     "nba-api-tID": 1610612757
   },
   {
-    "player-name": "Skylar Mays",
-    "nba-api-pID": 1630219,
-    "nba-api-tID": 1610612757
-  },
-  {
     "player-name": "Matisse Thybulle",
     "nba-api-pID": 1629680,
     "nba-api-tID": 1610612757
   },
   {
-    "player-name": "Jerami Grant",
-    "nba-api-pID": 203924,
+    "player-name": "Kris Murray",
+    "nba-api-pID": 1631200,
     "nba-api-tID": 1610612757
   },
   {
-    "player-name": "Ish Wainright",
-    "nba-api-pID": 1630688,
+    "player-name": "Jerami Grant",
+    "nba-api-pID": 203924,
     "nba-api-tID": 1610612757
   },
   {
@@ -1835,34 +1635,14 @@
     "nba-api-tID": 1610612757
   },
   {
-    "player-name": "Ibou Badji",
-    "nba-api-pID": 1630641,
-    "nba-api-tID": 1610612757
-  },
-  {
     "player-name": "Robert Williams III",
     "nba-api-pID": 1629057,
     "nba-api-tID": 1610612757
   },
   {
-    "player-name": "Colby Jones",
-    "nba-api-pID": 1641732,
-    "nba-api-tID": 1610612758
-  },
-  {
-    "player-name": "Jordan Ford",
-    "nba-api-pID": 1630259,
-    "nba-api-tID": 1610612758
-  },
-  {
-    "player-name": "Sasha Vezenkov",
-    "nba-api-pID": 1628426,
-    "nba-api-tID": 1610612758
-  },
-  {
-    "player-name": "Jalen Slawson",
-    "nba-api-pID": 1641771,
-    "nba-api-tID": 1610612758
+    "player-name": "Rayan Rupert",
+    "nba-api-pID": 1641712,
+    "nba-api-tID": 1610612757
   },
   {
     "player-name": "Malik Monk",
@@ -1882,6 +1662,11 @@
   {
     "player-name": "De'Aaron Fox",
     "nba-api-pID": 1628368,
+    "nba-api-tID": 1610612758
+  },
+  {
+    "player-name": "Sasha Vezenkov",
+    "nba-api-pID": 1628426,
     "nba-api-tID": 1610612758
   },
   {
@@ -1905,8 +1690,8 @@
     "nba-api-tID": 1610612758
   },
   {
-    "player-name": "Kessler Edwards",
-    "nba-api-pID": 1630556,
+    "player-name": "Colby Jones",
+    "nba-api-pID": 1641732,
     "nba-api-tID": 1610612758
   },
   {
@@ -1920,6 +1705,11 @@
     "nba-api-tID": 1610612758
   },
   {
+    "player-name": "Jordan Ford",
+    "nba-api-pID": 1630259,
+    "nba-api-tID": 1610612758
+  },
+  {
     "player-name": "Harrison Barnes",
     "nba-api-pID": 203084,
     "nba-api-tID": 1610612758
@@ -1930,23 +1720,8 @@
     "nba-api-tID": 1610612758
   },
   {
-    "player-name": "Sir'Jabari Rice",
-    "nba-api-pID": 1641811,
-    "nba-api-tID": 1610612759
-  },
-  {
     "player-name": "Victor Wembanyama",
     "nba-api-pID": 1641705,
-    "nba-api-tID": 1610612759
-  },
-  {
-    "player-name": "Charles Bediako",
-    "nba-api-pID": 1641777,
-    "nba-api-tID": 1610612759
-  },
-  {
-    "player-name": "Sidy Cissoko",
-    "nba-api-pID": 1631321,
     "nba-api-tID": 1610612759
   },
   {
@@ -1962,6 +1737,11 @@
   {
     "player-name": "Jeremy Sochan",
     "nba-api-pID": 1631110,
+    "nba-api-tID": 1610612759
+  },
+  {
+    "player-name": "Sir'Jabari Rice",
+    "nba-api-pID": 1641811,
     "nba-api-tID": 1610612759
   },
   {
@@ -1992,6 +1772,11 @@
   {
     "player-name": "Devin Vassell",
     "nba-api-pID": 1630170,
+    "nba-api-tID": 1610612759
+  },
+  {
+    "player-name": "Sidy Cissoko",
+    "nba-api-pID": 1631321,
     "nba-api-tID": 1610612759
   },
   {
@@ -2060,11 +1845,6 @@
     "nba-api-tID": 1610612760
   },
   {
-    "player-name": "Lindy Waters III",
-    "nba-api-pID": 1630322,
-    "nba-api-tID": 1610612760
-  },
-  {
     "player-name": "Ousmane Dieng",
     "nba-api-pID": 1631172,
     "nba-api-tID": 1610612760
@@ -2103,16 +1883,6 @@
     "player-name": "Olivier Sarr",
     "nba-api-pID": 1630846,
     "nba-api-tID": 1610612760
-  },
-  {
-    "player-name": "Kenrich Williams",
-    "nba-api-pID": 1629026,
-    "nba-api-tID": 1610612760
-  },
-  {
-    "player-name": "Javon Freeman-Liberty",
-    "nba-api-pID": 1631241,
-    "nba-api-tID": 1610612761
   },
   {
     "player-name": "Gradey Dick",
@@ -2265,11 +2035,6 @@
     "nba-api-tID": 1610612762
   },
   {
-    "player-name": "Micah Potter",
-    "nba-api-pID": 1630695,
-    "nba-api-tID": 1610612762
-  },
-  {
     "player-name": "Ochai Agbaji",
     "nba-api-pID": 1630534,
     "nba-api-tID": 1610612762
@@ -2290,16 +2055,6 @@
     "nba-api-tID": 1610612762
   },
   {
-    "player-name": "GG Jackson",
-    "nba-api-pID": 1641713,
-    "nba-api-tID": 1610612763
-  },
-  {
-    "player-name": "Jacob Gilyard",
-    "nba-api-pID": 1631367,
-    "nba-api-tID": 1610612763
-  },
-  {
     "player-name": "Xavier Tillman",
     "nba-api-pID": 1630214,
     "nba-api-tID": 1610612763
@@ -2310,23 +2065,13 @@
     "nba-api-tID": 1610612763
   },
   {
-    "player-name": "Steven Adams",
-    "nba-api-pID": 203500,
-    "nba-api-tID": 1610612763
-  },
-  {
     "player-name": "Derrick Rose",
     "nba-api-pID": 201565,
     "nba-api-tID": 1610612763
   },
   {
-    "player-name": "Vince Williams Jr.",
-    "nba-api-pID": 1631246,
-    "nba-api-tID": 1610612763
-  },
-  {
-    "player-name": "Kenneth Lofton Jr.",
-    "nba-api-pID": 1631254,
+    "player-name": "Steven Adams",
+    "nba-api-pID": 203500,
     "nba-api-tID": 1610612763
   },
   {
@@ -2375,6 +2120,11 @@
     "nba-api-tID": 1610612763
   },
   {
+    "player-name": "GG Jackson",
+    "nba-api-pID": 1641713,
+    "nba-api-tID": 1610612763
+  },
+  {
     "player-name": "John Konchar",
     "nba-api-pID": 1629723,
     "nba-api-tID": 1610612763
@@ -2407,11 +2157,6 @@
   {
     "player-name": "Ryan Rollins",
     "nba-api-pID": 1631157,
-    "nba-api-tID": 1610612764
-  },
-  {
-    "player-name": "Xavier Cooks",
-    "nba-api-pID": 1641645,
     "nba-api-tID": 1610612764
   },
   {
@@ -2465,34 +2210,9 @@
     "nba-api-tID": 1610612764
   },
   {
-    "player-name": "Taj Gibson",
-    "nba-api-pID": 201959,
-    "nba-api-tID": 1610612764
-  },
-  {
     "player-name": "Danilo Gallinari",
     "nba-api-pID": 201568,
     "nba-api-tID": 1610612764
-  },
-  {
-    "player-name": "Eugene Omoruyi",
-    "nba-api-pID": 1630647,
-    "nba-api-tID": 1610612764
-  },
-  {
-    "player-name": "Marcus Sasser",
-    "nba-api-pID": 1631204,
-    "nba-api-tID": 1610612765
-  },
-  {
-    "player-name": "Malcolm Cazalon",
-    "nba-api-pID": 1630608,
-    "nba-api-tID": 1610612765
-  },
-  {
-    "player-name": "Ausar Thompson",
-    "nba-api-pID": 1641709,
-    "nba-api-tID": 1610612765
   },
   {
     "player-name": "Jalen Duren",
@@ -2515,8 +2235,8 @@
     "nba-api-tID": 1610612765
   },
   {
-    "player-name": "Jared Rhoden",
-    "nba-api-pID": 1631197,
+    "player-name": "Ausar Thompson",
+    "nba-api-pID": 1641709,
     "nba-api-tID": 1610612765
   },
   {
@@ -2535,13 +2255,18 @@
     "nba-api-tID": 1610612765
   },
   {
-    "player-name": "Stanley Umude",
-    "nba-api-pID": 1630649,
+    "player-name": "Malcolm Cazalon",
+    "nba-api-pID": 1630608,
     "nba-api-tID": 1610612765
   },
   {
     "player-name": "Jaden Ivey",
     "nba-api-pID": 1631093,
+    "nba-api-tID": 1610612765
+  },
+  {
+    "player-name": "Marcus Sasser",
+    "nba-api-pID": 1631204,
     "nba-api-tID": 1610612765
   },
   {
@@ -2563,26 +2288,6 @@
     "player-name": "Bojan Bogdanovic",
     "nba-api-pID": 202711,
     "nba-api-tID": 1610612765
-  },
-  {
-    "player-name": "Brandon Miller",
-    "nba-api-pID": 1641706,
-    "nba-api-tID": 1610612766
-  },
-  {
-    "player-name": "Nick Smith Jr.",
-    "nba-api-pID": 1641733,
-    "nba-api-tID": 1610612766
-  },
-  {
-    "player-name": "Amari Bailey",
-    "nba-api-pID": 1641735,
-    "nba-api-tID": 1610612766
-  },
-  {
-    "player-name": "Leaky Black",
-    "nba-api-pID": 1641778,
-    "nba-api-tID": 1610612766
   },
   {
     "player-name": "Miles Bridges",
@@ -2625,8 +2330,18 @@
     "nba-api-tID": 1610612766
   },
   {
+    "player-name": "Nick Smith Jr.",
+    "nba-api-pID": 1641733,
+    "nba-api-tID": 1610612766
+  },
+  {
     "player-name": "Theo Maledon",
     "nba-api-pID": 1630177,
+    "nba-api-tID": 1610612766
+  },
+  {
+    "player-name": "Amari Bailey",
+    "nba-api-pID": 1641735,
     "nba-api-tID": 1610612766
   },
   {
@@ -2645,8 +2360,8 @@
     "nba-api-tID": 1610612766
   },
   {
-    "player-name": "JT Thor",
-    "nba-api-pID": 1630550,
+    "player-name": "Brandon Miller",
+    "nba-api-pID": 1641706,
     "nba-api-tID": 1610612766
   },
   {
