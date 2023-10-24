@@ -9,8 +9,15 @@ go_to_py.txt
 bash_commands.txt
 
 *__debug_bin
+src/*__debug_bin
 *__
 
 incase_of_leaderboard.txt
 
 quickthoughts.txt
+
+__debug_bin*.*
+
+src/__debug_bin*.*
+
+gettyscrape/
