@@ -9,7 +9,7 @@ import (
 	"math/rand"
 	"os"
 	"path/filepath"
-
+	"time"
 	"strings"
 
 	"github.com/Kagami/go-face"
@@ -249,14 +249,16 @@ func main() {
 
 	playerName := "Joel Embiid" //random_player(players_map)
 
-	username := "Kofi"
+	username := "Danielle"
 
-	user_Descriptor, err := get_Descriptor(&rec, filepath.Join(user_jpg_path, "user.jpg"))
+	user_Descriptor, err := get_Descriptor(&rec, filepath.Join(user_jpg_path, "danielle.jpg"))
 	if err != nil {
 		log.Fatal(err)
 	} else {
-		fmt.Println("Succesfully retrieved user_image's facial descriptors....")
+		fmt.Printf("Succesfully retrieved %s's facial descriptors...\n", username)
 	}
+	
+	defer rec.Close()
 
 	euclideanD := face.SquaredEuclideanDistance(user_Descriptor, get_averageDescriptor(players_map[playerName]))
 
@@ -269,12 +271,11 @@ func main() {
 }
 
 func random_player(m map[string][]face.Descriptor) string {
-	index := rand.Intn(len(m))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+
+	keys := make([]string, 0, len(m))
 	for key := range m {
-		if index == 0 {
-			return key
-		}
-		index--
+		keys = append(keys, key)
 	}
-	return ""
+	return keys[r.Intn(len(keys))]
 }
